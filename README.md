@@ -66,7 +66,9 @@ Because of that, I would recommend the real estate agency focus on the following
 
 ## Repository Structure
 ├── README.md                                        <- The top-level README for reviewers of this project
+
 ├── king-county-housing-analysis.ipynb               <- Narrative documentation of analysis in Jupyter notebook
+
 ├── King_County_Housing_Presentation.pdf             <- PDF version of project presentation
 
 └── data                                             <- King County Housing Dataset
