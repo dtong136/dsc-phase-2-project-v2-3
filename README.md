@@ -48,15 +48,17 @@ Finally, I took 'zipcode'. This feature was a numerical value however it doesn't
 Below is the R-squared results of my models
 - Baseline model (only 'sqft_living'): 0.455
 ![Baseline Model](.images/sqft_living_baseline_model.png)
+
 - Second model ('sqft_living' and 'grade'): 0.537
 ![Second Model](.images/grade_added_model.png)
+
 - Final model (adding encoded 'zipcode' data): 0.839
 ![Final Model](.images/encoded_zipcode_model.png)
 
 Model Coefficients:
-- 'sqft_living': 0.559 which suggests that for every % increase in 'sqft_living', price will increase by 0.559%.
-- 'grade': 0.867 which suggests that for every % increase in 'grade', price will increase by 0.867%
-- 'zipcode': 98112, 98004, 98039 are the 3 zip codes with sale prices that are on average over 100% higher than the other zip codes in  King County.
+- 'sqft_living': 0.559 which suggests that for every % increase in 'sqft_living', price will increase by 0.536%.
+- 'grade': 0.867 which suggests that for every % increase in 'grade', price will increase by 0.846%
+- 'zipcode': 98112, 98004, 98039 are the 3 ZIP codes with sale prices that are on average over 100% higher than the other ZIP codes in King County.
 
 Through 5-fold cross validation and a train test split, the Mean Squared Errors were all similar and around 0.045 throughout.
 
@@ -64,9 +66,14 @@ Through 5-fold cross validation and a train test split, the Mean Squared Errors 
 My analysis suggests that 'sqft_living', 'grade', and 'zipcode' are the features that most influence higher sale prices.
 
 Because of that, I would recommend the real estate agency focus on the following with regards to their pricing:
-- Square Footage of the House
-- Construction and Design Quality of the House
-- Location of the House
+### Square Footage of the House
+Prospective sellers may look to potentially increase their home by increasing their home's livable square footage through renovation. Some examples of renovations to increase a home's value may be finishing an attic and basement, adding a livable unit in the back yard, adding an extension like a sunroom, etc.
+
+### Construction and Design Quality of the House
+When considering renovations, sellers should also be cognizant of the contractors they work with. Better construction quality and design will yield higher prices, so I would recommend being selective and working with reputable companies with renovations like increasing Living Square Footage. Homeowners may also increase their home's grade through remodeling and updating their interior. They could do this by replacing floors, improve rooms (bathrooms, kitchen, bedrooms, etc), upgrade appliances, etc.
+
+### Location of the House
+My model found 3 ZIP codes with sale prices above 100% higher than other ZIP codes in King County. Homeowners in these areas may look to take advantage of these prices and sell. They may also look to improve their home's value through renovation before selling.
 
 ## For More Information
 
@@ -77,11 +84,15 @@ For any additional questions, please contact **Dan Tong (dtong136@gmail.com)**
 
 ## Repository Structure
 ├── README.md                                        <- The top-level README for reviewers of this project
-|
+
+
 ├── king-county-housing-analysis.ipynb               <- Narrative documentation of analysis in Jupyter notebook
-|
+
+
 ├── King_County_Housing_Presentation.pdf             <- PDF version of project presentation
-|
+
+
 ├── images                                           <- Both sourced externally and generated from code
-|
+
+
 └── data                                             <- King County Housing Dataset
