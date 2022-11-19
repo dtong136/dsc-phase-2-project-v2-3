@@ -47,12 +47,15 @@ Finally, I took 'zipcode'. This feature was a numerical value however it doesn't
 ### Findings
 Below is the R-squared results of my models
 - Baseline model (only 'sqft_living'): 0.455
+
 ![Baseline Model](./images/sqft_living_baseline_model.png)
 
 - Second model ('sqft_living' and 'grade'): 0.537
+
 ![Second Model](./images/grade_added_model.png)
 
 - Final model (adding encoded 'zipcode' data): 0.839
+
 ![Final Model](./images/encoded_zipcode_model.png)
 
 Model Coefficients:
